@@ -31,9 +31,12 @@ namespace WindowsFormsApp1
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
+            FormMain formmain = new FormMain();
             if(username == "0013768@st.huce.edu.vn" && password == "0013768")
             {
                 MessageBox.Show("Đăng nhập thành công!");
+                formmain.Show();
+                this.Hide();
             }
             else
             {
