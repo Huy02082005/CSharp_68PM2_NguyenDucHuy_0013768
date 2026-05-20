@@ -60,6 +60,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_QLSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QLSV.Designer.cs">
+      <DependentUpon>UC_QLSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_QLLH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QLLH.Designer.cs">
+      <DependentUpon>UC_QLLH.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +87,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC_QLLH.resx">
+      <DependentUpon>UC_QLLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QLSV.resx">
+      <DependentUpon>UC_QLSV.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
