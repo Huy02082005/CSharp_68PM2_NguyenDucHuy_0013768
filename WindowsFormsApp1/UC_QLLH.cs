@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class UC_QLLH : UserControl
     {
+        dbDataContext db = new dbDataContext();
         public UC_QLLH()
         {
             InitializeComponent();
@@ -41,5 +42,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void UC_QLLH_Load(object sender, EventArgs e)
+        {
+            List<LopHoc> dslh = db.LopHocs.ToList();
+            dgvLopHoc.DataSource = dslh;
+        }
+
     }
 }

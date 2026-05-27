@@ -302,6 +302,7 @@
             this.btnThem.TabIndex = 22;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -369,6 +370,7 @@
             this.Controls.Add(this.btnSua);
             this.Name = "UC_QLSV";
             this.Size = new System.Drawing.Size(1467, 818);
+            this.Load += new System.EventHandler(this.UC_QLSV_Load);
             this.panelPhanTrang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
