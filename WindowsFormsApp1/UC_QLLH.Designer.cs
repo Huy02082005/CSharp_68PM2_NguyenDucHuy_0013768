@@ -69,6 +69,7 @@
             this.dgvLopHoc.RowTemplate.Height = 24;
             this.dgvLopHoc.Size = new System.Drawing.Size(889, 581);
             this.dgvLopHoc.TabIndex = 39;
+            this.dgvLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLopHoc_CellClick);
             // 
             // btnTim
             // 
@@ -102,7 +103,6 @@
             this.label6.Size = new System.Drawing.Size(361, 25);
             this.label6.TabIndex = 36;
             this.label6.Text = "Tìm kiếm (Mã ID / Mã lớp / Tên lớp):";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnXoa
             // 
@@ -117,6 +117,7 @@
             this.btnXoa.TabIndex = 34;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -131,6 +132,7 @@
             this.btnThem.TabIndex = 32;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -151,7 +153,6 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp học";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
             // 
@@ -181,7 +182,6 @@
             this.label1.Size = new System.Drawing.Size(61, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtMaSV
             // 
@@ -220,7 +220,6 @@
             this.label5.Size = new System.Drawing.Size(76, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "Tên lớp:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cboLop
             // 
@@ -232,7 +231,6 @@
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(404, 33);
             this.cboLop.TabIndex = 9;
-            this.cboLop.SelectedIndexChanged += new System.EventHandler(this.cboLop_SelectedIndexChanged);
             // 
             // btnLamMoi
             // 
@@ -247,6 +245,7 @@
             this.btnLamMoi.TabIndex = 35;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnSua
             // 
@@ -261,6 +260,7 @@
             this.btnSua.TabIndex = 33;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnFirst
             // 
@@ -343,6 +343,7 @@
             this.button1.TabIndex = 41;
             this.button1.Text = "Xem danh sách sinh viên";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UC_QLLH
             // 
