@@ -167,12 +167,33 @@ namespace WindowsFormsApp1
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            
+            txtMaSV.Clear();
+            txtHoTen.Clear();
+            txtTimKiem.Clear();
+            dtpNgaySinh.Value = DateTime.Now;
+            if (cboGioiTinh.Items.Count > 0) cboGioiTinh.SelectedIndex = 0;
+            if (cboLop.Items.Count > 0) cboLop.SelectedIndex = 0;
+            txtMaSV.Focus();
+            LoadData();
         }
 
         private void ThucHienTimKiem()
         {
-            
+            string tuKhoa = txtTimKiem.Text.Trim();
+            db = new dbDataContext();
+
+            var ketQua = from sv in db.SinhViens
+                         where sv.MaSV.Contains(tuKhoa) || sv.HoTen.Contains(tuKhoa) || sv.MaLop.Contains(tuKhoa)
+                         select new
+                         {
+                             MaSV = sv.MaSV,
+                             HoTen = sv.HoTen,
+                             NgaySinh = sv.NgaySinh,
+                             GioiTinh = sv.GioiTinh,
+                             MaLop = sv.MaLop
+                         };
+
+            dgvSinhVien.DataSource = ketQua.ToList();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
